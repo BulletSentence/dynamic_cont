@@ -13,12 +13,22 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-
   int _ppl = 0;
+  String _info = "ENTER";
 
   void changeppl(int delta){
     setState(() {
       _ppl += delta;
+
+      if (_ppl < 0) {
+        _info = "WTF?";
+      }
+      else if (_ppl <= 10) {
+        _info = "ENTER";
+      }
+      else {
+        _info = "FULL";
+      }
     });
   }
 
