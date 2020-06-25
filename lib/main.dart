@@ -3,49 +3,61 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(new MaterialApp(
     title: "DNC",
-    home: Column (
-      mainAxisAlignment: MainAxisAlignment.center,
+    home: Stack (
       children: <Widget>[
-        Text(
-          "PPL: 0",
-          style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-          ),
+        Image.asset(
+          "images/bg.jpg",
+          fit: BoxFit.cover,
+          height: 1000.0, 
         ),
-        Row(
+        Column (
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            FlatButton(
-              child: Text(
-                "+1",
-                style: TextStyle(
-                  fontSize: 40,
-                  color: Colors.white,
-                ),
+            Text(
+              "PPL: 0",
+              style: TextStyle(
+                color: Colors.yellow,
+                fontWeight: FontWeight.bold,
               ),
-              onPressed: null,
             ),
-            FlatButton(
-              child: Text(
-                "-1",
-                style: TextStyle(
-                  fontSize: 40,
-                  color: Colors.white,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: FlatButton(
+                    child: Text(
+                      "+1",
+                      style: TextStyle(
+                        fontSize: 40,
+                        color: Colors.yellow,
+                      ),
+                    ),
+                    onPressed: null,
+                  ),
                 ),
-              ),
-              onPressed: null,
+                FlatButton(
+                  child: Text(
+                    "-1",
+                    style: TextStyle(
+                      fontSize: 40,
+                      color: Colors.yellow,
+                    ),
+                  ),
+                  onPressed: null,
+                ),
+              ],
+            ),
+            Text(
+              "ENTER",
+              style: TextStyle(
+                fontSize: 50,
+                color: Colors.yellow,
+              )
             ),
           ],
         ),
-        Text(
-          "ENTER",
-          style: TextStyle(
-            fontSize: 50,
-            color: Colors.white,
-          ),
-        ),
       ],
-    ),
+    )
   ));
 }
