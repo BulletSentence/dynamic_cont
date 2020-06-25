@@ -13,6 +13,31 @@ void main() {
               fontWeight: FontWeight.bold,
           ),
         ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            FlatButton(
+              child: Text(
+                "+1",
+                style: TextStyle(
+                  fontSize: 40,
+                  color: Colors.white,
+                ),
+              ),
+              onPressed: null,
+            ),
+            FlatButton(
+              child: Text(
+                "-1",
+                style: TextStyle(
+                  fontSize: 40,
+                  color: Colors.white,
+                ),
+              ),
+              onPressed: null,
+            ),
+          ],
+        ),
         Text(
           "ENTER",
           style: TextStyle(
